@@ -196,6 +196,8 @@ qq.FileUploader.prototype = {
         if (!allowed.length){return true;}
 
         for (var i=0; i<allowed.length; i++){
+            if (-1 !== allowed[i].indexOf('-'))
+                return allowed[i].replace('-','').toLowerCase() != ext;
             if (allowed[i].toLowerCase() == ext){
                 return true;
             }

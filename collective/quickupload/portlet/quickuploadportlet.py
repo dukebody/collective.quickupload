@@ -97,6 +97,7 @@ class IQuickUploadPortlet(IPortletDataProvider):
                                                                        SimpleTerm('video', 'video', _(u"Video files")),
                                                                        SimpleTerm('audio', 'audio', _(u"Audio files")),
                                                                        SimpleTerm('flash', 'flash', _(u"Flash files")),
+                                                                       SimpleTerm('*.-zip;', 'nozip', _(u"No ZIP files")),
                                                                        ]), )
 
 class Assignment(base.Assignment):
